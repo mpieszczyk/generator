@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<title>Generator podpisów e-mail | Komputronik S.A.</title>
+		<!-- Bootstrap core CSS -->
+		<!-- <link href="./assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+		<link href="./assets/css/bootstrap.min.css" rel="stylesheet">
+		<!-- Custom styles for this template -->
+		<link rel="stylesheet" href="./assets/css/simple-sidebar.css">
+		<style media="screen">
+			a,
+			body,
+			p,
+			td {
+				font: normal 11pt Calibri,Tahoma,Arial,sans-serif;
+			}
+			p {
+				margin: 0;
+				padding: 0;
+			}
+			p.person {
+				color: #000000;
+			}
+			a.p-mail {
+				color: #0072bc;
+			}
+			p.p-data,
+			p.p-data .crew,
+			p.p-data .fax,
+			p.p-data .mphone,
+			p.p-data .phone,
+			p.p-data .pos,
+			p.p-data .section {
+				color: #000000;
+			}
+			p.kt-name {
+				font-weight: bold;
+				color: #0072bc;
+			}
+			,
+			p.kt-adr,
+			p.kt-adr .saddr,
+			p.kt-adr .sfax,
+			p.kt-adr .shours,
+			p.kt-adr .sphone {
+				color: #000000;
+			}
+			p.kt-data {
+				font-size: 11px;
+				color: #666666;
+			}
+			span.data-grey {
+				color: #BBBBBB;
+			}
+			td.pole {
+				width: 120px;
+				font-size: 12px;
+			}
+			td.nagl {
+				font-size: 14px;
+				font-weight: bold;
+				padding-top: 20px;
+			}
+			input[type=text] {
+				width: 200px;
+				font: normal 12px Tahoma,Arial,Verdana,Helvetica,sans-serif;
+			}
+			span.opis {
+				font: normal 11px Tahoma,Arial,Verdana,Helvetica,sans-serif;
+				color: #555555;
+				margin-left: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="d-flex" id="wrapper">
+			<!-- Sidebar -->
+			<div class="border-right d-none d-lg-block" id="sidebar-wrapper">
+				<div class="sidebar-heading">Rodzaj podpisu:</div>
+				<ul class="list-group list-group-flush" id="formMenu">
+					<li id="cent" class="list-group-item form-type active">Centrala</li>
+					<li class="list-group-item">Salony:<br/><br/>
+						<ul class="list-group list-group-flush">
+							<li id="salOwn" class="list-group-item form-type border-top">własne</li>
+							<li id="salFr" class="list-group-item form-type">franczyzowe</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<!-- #sidebar-wrapper -->
+			<!-- Page Content -->
+			<div id="page-content-wrapper">
+				<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+					<button class="btn btn-secondary btn-sm d-none d-lg-block" id="menu-toggle">Ukryj menu</button>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul id="formMenu" class="navbar-nav mr-auto mt-2 mt-lg-0 d-lg-none">
+							<li id="navCent" class="nav-link form-type active">Centrala</li>
+							<li id="navSalOwn" class="nav-link form-type">Salony własne</li>
+							<li id="navSalFr" class="nav-link form-type">Salony franczyzowe</li>
+						</ul>
+						<ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+							<li class="nav-link align-right" id="goBack">
+                < Powrót do pomocy
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div class="container-fluid">
+
+          <h1 class="mt-5">Wypełnij poniższy formularz</h1>
+
+          <form id="footerForm" class="mt-5">
+
+            <div class="container-fluid" id="personData">
+              <h2 class="mt-5">Dane osoby:</h2>
+              <div class="form-group row">
+                <label for="fname" class="col-4 col-md-2 col-form-label">Imię:</label>
+							  <div class="col-8 col-md-10 input-group-sm d-flex align-items-center row flex-wrap">
+								  <input id="fname" name="fname" type="text" class="form-control form-control-sm col-10 col-md-6 col-xl-4 mr-3">
+							  </div>
+  						</div>
+  						<div class="form-group row">
+  							<label for="lname" class="col-4 col-md-2 col-form-label">Nazwisko:</label>
+  							<div class="col-8 col-md-10 input-group-sm d-flex align-items-center row flex-wrap">
+  								<input id="lname" name="lname" type="text" class="form-control form-control-sm col-10 col-md-6 col-xl-4 mr-3">
+  							</div>
+  						</div>
+  						<div class="form-group row">
+  							<label for="mail" class="col-4 col-md-2 col-form-label">E-mail:</label>
+  							<div class="col-8 col-md-10 input-group-sm d-flex align-items-center row flex-wrap">
+  								<input id="mail" name="mail" type="text" class="form-control form-control-sm col-10 col-md-6 col-xl-4 mr-3">
+  							</div>
+  						</div>
+  						<div class="form-group row">
+  							<label for="pos" class="col-4 col-md-2 col-form-label">Stanowisko:</label>
+  							<div class="col-8 col-md-10 input-group-m d-flex align-items-center row flex-wrap">
+  								<input id="pos" name="position" type="text" class="form-control form-control-sm col-10 col-md-6 col-xl-4 mr-3">
+  							</div>
+  						</div>
+  						<div class="form-group row" id="cCrew">
+  							<label for="crew" class="col-4 col-md-2 col-form-label">Zespół:</label>
+  							<div class="col-8 col-md-10 input-group-sm d-flex align-items-center row flex-wrap">
+  								<input id="crew" name="crew" type="text" class="form-control form-control-sm col-10 col-md-6 col-xl-4 mr-3">
+  							</div>
+  						</div>
+  						<div class="form-group row">
+  							<label for="section" class="col-4 col-md-2 col-form-label">Dział:</label>
+  							<div class="col-8 col-md-10 input-group-sm d-flex align-items-center row flex-wrap">
+  								<input id="section" name="section" type="text" class="form-control form-control-sm col-10 col-md-6 col-xl-4 mr-3">
+  							</div>
+  						</div>
+  						<div class="form-group row">
+  							<label for="mphone" class="col-4 col-md-2 col-form-label">Tel. kom:</label>
+  							<div class="col-8 col-md-10 input-group-sm d-flex align-items-center row flex-wrap">
+  								<input id="mphone" name="mphone" type="text" aria-describedby="mphoneHelpBlock" class="form-control form-control-sm col-10 col-md-6 col-xl-4 mr-3">
+  								<span id="mphoneHelpBlock" class="form-text text-muted form-control-sm">w postaci: +48 XXX XXX XXX</span>
+  							</div>
+  						</div>
+  						<div class="form-group row">
+  							<label for="phone" class="col-4 col-md-2 col-form-label">Tel. stacj.:</label>
+  							<div class="col-8 col-md-10 input-group-sm d-flex align-items-center row flex-wrap">
+  								<input id="phone" name="phone" type="text" aria-describedby="phoneHelpBlock" class="form-control form-control-sm col-10 col-md-6 col-xl-4 mr-3">
+  								<span id="phoneHelpBlock" class="form-text text-muted form-control-sm">w postaci: +48 XX XXX XX XX</span>
+  							</div>
+  						</div>
+  						<div class="form-group row" id="cFax">
+  							<label for="fax" class="col-4 col-md-2 col-form-label">Fax:</label>
+  							<div class="col-8 col-md-10 input-group-sm d-flex align-items-center row flex-wrap">
+  								<input id="fax" name="fax" type="text" class="form-control form-control-sm col-10 col-md-6 col-xl-4 mr-3" aria-describedby="faxHelpBlock">
+  								<span id="faxHelpBlock" class="form-text text-muted form-control-sm">w postaci: +48 XX XXX XX XX</span>
+  							</div>
+  						</div>
+  					</div>
+
+  					<div class="container-fluid d-none" id="salonData">
+  						<h2 class="mt-5">Dane salonu:</h2>
+  						<div class="form-group row">
+  							<label for="scity" class="col-4 col-md-2 col-form-label">Miasto:</label>
+  							<div class="col-8 col-md-10 input-group-sm d-flex align-items-center row flex-wrap">
+  								<input id="scity" name="scity" type="text" class="form-control form-control-sm col-10 col-md-6 col-xl-4 mr-3">
+  							</div>
+  						</div>
+  						<div class="form-group row">
+  							<label for="saddr" class="col-4 col-md-2 col-form-label">Adres:</label>
+  							<div class="col-8 col-md-10 input-group-sm d-flex align-items-center row flex-wrap">
+  								<input id="saddr" name="saddr" type="text" class="form-control form-control-sm col-10 col-md-6 col-xl-4 mr-3" aria-describedby="saddrHelpBlock">
+  								<span id="saddrHelpBlock" class="form-text text-muted form-control-sm">w postaci: NAZWA C.H, ul. NAZWA_ULICY NR, KOD-POCZTOWY MIEJSCOWOŚĆ</span>
+  							</div>
+  						</div>
+  						<div class="form-group row">
+  							<label for="sphone" class="col-4 col-md-2 col-form-label">Tel. stacj.:</label>
+  							<div class="col-8 col-md-10 input-group-sm d-flex align-items-center row flex-wrap">
+  								<input id="sphone" name="sphone" type="text" aria-describedby="sphoneHelpBlock" class="form-control form-control-sm col-10 col-md-6 col-xl-4 mr-3">
+  								<span id="sphoneHelpBlock" class="form-text text-muted form-control-sm">w postaci: +48 XX XXX XX XX</span>
+  							</div>
+  						</div>
+  						<div class="form-group row">
+  							<label for="sfax" class="col-4 col-md-2 col-form-label">Fax:</label>
+  							<div class="col-8 col-md-10 input-group-sm d-flex align-items-center row flex-wrap">
+  								<input id="sfax" name="sfax" type="text" aria-describedby="sfaxHelpBlock" class="form-control form-control-sm col-10 col-md-6 col-xl-4 mr-3">
+  								<span id="sfaxHelpBlock" class="form-text text-muted form-control-sm">w postaci: +48 XX XXX XX XX</span>
+  							</div>
+  						</div>
+  						<div class="form-group row">
+  							<label for="shours" class="col-4 col-md-2 col-form-label">Godz. otwarcia:</label>
+  							<div class="col-8 col-md-10 input-group-sm d-flex align-items-center row flex-wrap">
+  								<input id="shours" name="shours" type="text" class="form-control form-control-sm col-10 col-md-8 col-xl-6 mr-3" aria-describedby="shoursHelpBlock">
+  								<span id="shoursHelpBlock" class="form-text text-muted form-control-sm">w postaci: np. Pn-Pt 9:00-20:00, Sb-Nd 10:00-14:00 (Pn, Wt, Śr, Czw, Pt, Sb, Nd)</span>
+  							</div>
+  						</div>
+  						<div class="form-group row d-none" id="sFb">
+  							<label for="spage" class="col-4 col-md-2 col-form-label">Strona Facebook:</label>
+  							<div class="col-8 col-md-10 input-group-sm d-flex align-items-center row flex-wrap">
+  								<input id="spage" name="spage" type="text" aria-describedby="spageHelpBlock" class="form-control form-control-sm col-10 col-md-8 col-xl-6 mr-3">
+  								<span id="spageHelpBlock" class="form-text text-muted form-control-sm form-control-sm">podajemy pełny adres, np. https://www.facebook.com/komputronik_belchatow</span>
+  							</div>
+  						</div>
+					  </div>
+  					<div class="form-group row mt-5 mb-5">
+  						<div class="offset-2 col-4">
+  							<button id="formData" name="submit" type="submit" class="btn btn-primary" data-bs-toggle="dataModal" data-bs-target="#dataModal">Generuj stopkę</button>
+  						</div>
+  					</div>
+  				</form>
+				  <!-- Modal -->
+				  <div class="modal fade" id="dataModal" tabindex="-1" aria-labelledby="dataModalLabel" aria-hidden="true">
+					  <div class="modal-dialog">
+  						<div class="modal-content">
+  							<div class="modal-header">
+  								<h5 class="modal-title">Zaznacz całość, skopiuj i następnie wklej do edytora Outlook</h5>
+  								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+  									<span aria-hidden="true">&times;</span>
+  								</button>
+  							</div>
+  							<div class="modal-body mail-desc">
+  								<p class="person">Pozdrawiam,<br><br>
+  									<strong>
+  										<span class="fname"></span>
+  										<span class="lname"></span>
+  									</strong>
+  									<a class="p-mail" href=""></a>
+  								</p>
+  								<p class="p-data">
+  									<span class="pos"></span>
+  									<span class="crew"></span>
+  									<span class="section"></span>
+  									<span class="mphone"></span>
+  									<span class="phone"></span>
+  									<span class="fax"></span>
+  								</p>
+  								<p class="kt-name"></p>
+  								<p class="kt-adr">
+  									<span class="saddr"></span>
+  									<span class="sphone"></span>
+  									<span class="sfax"></span>
+  									<span class="shours"></span>
+  								</p>
+  								<p class="kt-data"><br>Komputronik S.A. Sąd Rejonowy Poznań – Nowe Miasto i Wilda w Poznaniu, VIII Wydział Gospodarczy KRS 0000270885;<br>NIP 972-09-02-729; REGON 634404229; Numer Rejestrowy BDO: 000009602 Kapitał Zakładowy w pełni opłacony: 979 397,40 PLN<br><br>
+  									<span class="data-grey"><br>Działając na podstawie art. 4c ustawy w ustawie z dnia 8 marca 2013 r. o przeciwdziałaniu nadmiernym opóźnieniom w transakcjach handlowych<br>(t.j. Dz. U. z 2019 r. poz. 118) Komputronik S.A. oświadcza, iż posiada status dużego przedsiębiorcy.<br><br>Acting pursuant to article 4c of the Act of 8 March 2013 on preventing excessive delays in commercial transactions
+  										<br>(Journal of Laws of 2019, item 118, as amended), Komputronik S.A hereby declares that has the status of a large entrepreneur.<br><br></span>
+  								</p>
+  								<table cellpadding="0" cellspacing="0" border="0">
+  									<tbody>
+  										<tr>
+  											<td rowspan="2" width="327" height="152">
+  												<a href="https://www.komputronik.pl/?utm_source=KT_STOPKA_EMAIL_07_11_2017_podpis&amp;utm_medium=link&amp;utm_campaign=podpis"><img src="https://media.komputronik.pl/pl-komputronik/img/poczta/stopka/listopad2017/box01.png" height="152" width="327" alt="" border="0"></a>
+  											</td>
+  											<td width="70" height="88">
+  												<a href="https://www.facebook.com/komputronik?utm_source=email_07_11_2017_podpis&amp;utm_medium=link&amp;utm_campaign=podpis"><img src="https://media.komputronik.pl/pl-komputronik/img/poczta/stopka/listopad2017/box02fb.png" height="88" width="70" alt="" border="0"></a>
+  											</td>
+  											<td width="68" height="88">
+  												<a href="https://www.youtube.com/user/KomputronikSA?utm_source=email_07_11_2017_podpis&amp;utm_medium=link&amp;utm_campaign=podpis"><img src="https://media.komputronik.pl/pl-komputronik/img/poczta/stopka/listopad2017/box03yt.png" height="88" width="68" alt="" border="0"></a>
+  											</td>
+  											<td width="91" height="88">
+  												<a href="https://www.instagram.com/komputronik?utm_source=email_07_11_2017_podpis&amp;utm_medium=link&amp;utm_campaign=podpis"><img src="https://media.komputronik.pl/pl-komputronik/img/poczta/stopka/listopad2017/box04inst.png" height="88" width="91" alt="" border="0"></a>
+  											</td>
+  										</tr>
+  										<tr>
+  											<td colspan="3" width="229" height="64">
+  												<a href="https://www.komputronik.pl/?utm_source=KT_STOPKA_EMAIL_07_11_2017_podpis&amp;utm_medium=link&amp;utm_campaign=podpis"><img src="https://media.komputronik.pl/pl-komputronik/img/poczta/stopka/listopad2017/box05www.png" height="64" width="229" alt="" border="0"></a>
+  											</td>
+  										</tr>
+  									</tbody>
+  								</table>
+  							</div>
+  							<div class="modal-footer">
+  								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="modalClose">Zamknij</button>
+  							</div>
+  						</div>
+					  </div>
+				  </div>
+			  </div>
+		  </div>
+		<!-- /#page-content-wrapper -->
+	  </div>
+	<!-- /#wrapper -->
+	<!-- Bootstrap core JavaScript -->
+	<script src="./assets/vendor/jquery/jquery.min.js"></script>
+	<script src="./assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="./assets/js/main.js" charset="utf-8"></script>
+</body>
+</html>
