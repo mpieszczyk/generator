@@ -120,7 +120,7 @@
 		if ($('#scity').val() !== "") {
 			$('.kt-name').html("Salon Komputronik " + $scity)
 		} else {
-			$('.kt-name').html('Komputronik S.A.')
+			$('.kt-name').html('Komputronik S.A. w restrukturyzacji')
 		}
 
 		if ($('#saddr').val() !== "") {
