@@ -170,6 +170,14 @@
 
 	})
 
+	var clipboard = new ClipboardJS('#modalCopy');
+
+	$("#modalCopy").on("click", function() {
+		alert("Zawartość została skopiowana do schowka!");
+		$("#dataModal").modal('hide')
+	})
+
+
 	$("#modalClose").on("click", function() {
 		$("#dataModal").modal('hide')
 	})

@@ -28,6 +28,16 @@
 #page-content-wrapper .modal-dialog {
  max-width: 650px !important;
 }
+#page-content-wrapper .modal-dialog .modal-content {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    max-width: min-content;
+    max-height: min-content;
+    margin: auto;
+}
 #page-content-wrapper p.head {
  font-size:14px !important;
  font-weight:bold !important;
