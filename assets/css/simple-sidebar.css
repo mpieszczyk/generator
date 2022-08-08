@@ -35,7 +35,7 @@
     bottom: 0;
     left: 0;
     max-width: min-content;
-    max-height: 760px;
+    min-height: 760px;
     margin: auto;
 }
 #page-content-wrapper p.head {
